@@ -1,0 +1,31 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./typography" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
+}
+
+::placeholder {
+  color: $BrainFlix-DarkBlack;
+  opacity: 1;
+  @include regular;
+}
+
+
+.invalid {
+    border: 0.125rem solid #D22D2D;
+    &::placeholder {
+        color: #D22D2D;
+    }
+}
+
+
