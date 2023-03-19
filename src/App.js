@@ -28,17 +28,6 @@ function App() {
     });
   }, []);
 
-  useEffect(() => {
-    axios
-      .get("add your path here")
-      .then((response) => {
-        setQuestions(response.data);
-      })
-      .catch((err) => {
-        throw err;
-      });
-  }, []);
-
   const handleAnswerClick = (answer) => {
     if (!answersClickable) {
       return;
